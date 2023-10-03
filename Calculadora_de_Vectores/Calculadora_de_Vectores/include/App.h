@@ -13,10 +13,10 @@ public:
 		void Menu() 
 		{
 			cout << "----------------------------------------" << endl;
-			cout << "Seleccione una opcion:" << endl;
-			cout << "1- Vector 2D" << endl;
-			cout << "2- Vector 3D" << endl;
-			cout << "3- Vector 4D" << endl;
+			cout << "Por favor selcciona una de las opciones para realizar sus respectivas operaciones:" << endl;
+			cout << "1- Vector 2" << endl;
+			cout << "2- Vector 3" << endl;
+			cout << "3- Vector 4" << endl;
 			cout << "4- Salir" << endl;
 			cout << "----------------------------------------" << endl;
 			int op;
