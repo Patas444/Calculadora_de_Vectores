@@ -21,7 +21,6 @@
   <ItemGroup>
     <ClCompile Include="scr\App.cpp" />
     <ClCompile Include="scr\Main.cpp" />
-    <ClCompile Include="scr\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\App.h" />
