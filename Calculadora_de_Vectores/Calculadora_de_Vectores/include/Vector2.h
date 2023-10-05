@@ -6,55 +6,57 @@ public:
 	Vector2(double x, double y) : x_(x), y_(y) {}
 	~Vector2() = default;
 
-	//REALIZA LA SUMA ENTRE 2 VECTORES:
-	Vector2 sum(Vector2 v) 
+	//Realiza la suma entre 2 vectores
+	Vector2 suma(Vector2 v)
 	{
 		return Vector2(x_ + v.x_, y_ + v.y_);
 	}
 
-	//REALIZA LA RESTA ENTRE 2 VECTORES:
-	Vector2 rest(Vector2 v)
+	//Realiza la resta entre 2 vectores
+	Vector2 resta(Vector2 v)
 	{
 		return Vector2(x_ - v.x_, y_ - v.y_);
 	}
 
-	//REALIZA LA MULTIPLICACION ENTRE 2 VECTORES:
-	Vector2 mult(Vector2 v) 
+	//Realiza la multiplicacion entre 2 vectores
+	Vector2 multiplicacion(Vector2 v)
 	{
 		return Vector2(x_ * v.x_, y_ * v.y_);
 	}
 
-	//REALIZA LA DIVISION ENTRE 2 VECTORES:
-	Vector2 div(Vector2 v) 
+	//Realiza la division entre 2 vectores
+	Vector2 division(Vector2 v)
 	{
 		return Vector2(x_ / v.x_, y_ / v.y_);
 	}
 
-	//REALIZA EL PRODUCTO ESCALA ENTRE 2 VECTORES:
-	double prEsc(Vector2 v) 
+	//Realiza el producto escala entre 2 vectores
+	double productoEscalar(Vector2 v)
 	{
 		return (x_ * v.x_) + (y_ * v.y_);
 	}
 
-	//REALIZA EL PRODUCTO CRUZ ENTRE 2 VECTORES:
-	Vector2 prVect(Vector2 v) 
+	//Realiza el producto vectorial entre 2 vectores
+	Vector2 productoVectorial(Vector2 v)
 	{
 		return Vector2((x_ * v.y_) - (y_ * v.x_), (x_ * v.y_) - (y_ * v.x_));
 	}
 
-	//REALIZA LA DIVISION ENTRE 2 VECTORES:
+	//Realiza la magnitud entre 2 vectores
 	double magnitud() 
 	{
 		return sqrt(x_ * x_ + y_ * y_);
 	}
 
-	Vector2 norm() 
+	//Realiza la normalizacion entre 2 vectores
+	Vector2 normalizar()
 	{
 		double mag = magnitud();
 		return Vector2(x_ / mag, y_ / mag);
 	}
 
-	void Mostrar() 
+	//Muestra el resultado de los 2 vectores
+	void mostrar() 
 	{
 		cout << "(" << x_ << ", " << y_ << ")" << endl;
 	}

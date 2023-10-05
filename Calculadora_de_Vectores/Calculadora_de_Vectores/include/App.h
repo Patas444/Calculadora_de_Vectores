@@ -9,7 +9,7 @@ class App
 public:
 	App();
 	~App();
-
+		//Menu principal de la calculadora, aqui se selecciona si se usara el vector 2,3 o 4
 		void Menu() 
 		{
 			cout << "----------------------------------------" << endl;
@@ -25,23 +25,23 @@ public:
 			{
 			case 1:
 				Vector2D();
-				break;
+			break;
 			case 2:
 				Vector3D();
-				break;
+			break;
 			case 3:
 				Vector4D();
-				break;
+			break;
 			case 4:
 				exit(0);
-				break;
+			break;
 			default:
 				cout << "Error . . . " << endl;
-				break;
+			break;
 			}
 
 		}
-
+		//Menu de operaciones de 2 Vectores 
 		void Vector2D()
 		{
 			cout << "----------------------------------------" << endl;
@@ -69,6 +69,7 @@ public:
 			{
 			case 1:
 			{
+				//Resultado de la suma de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -76,9 +77,9 @@ public:
 				cin >> x2 >> y2;
 				Vector2 v1(x1, y1);
 				Vector2 v2(x2, y2);
-				Vector2 v3 = v1.sum(v2);
+				Vector2 v3 = v1.suma(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
 				cin >> op;
@@ -94,6 +95,7 @@ public:
 			}
 			case 2:
 			{
+				//Resultado de la resta de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -101,9 +103,9 @@ public:
 				cin >> x2 >> y2;
 				Vector2 v1(x1, y1);
 				Vector2 v2(x2, y2);
-				Vector2 v3 = v1.rest(v2);
+				Vector2 v3 = v1.resta(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
 				cin >> op;
@@ -119,6 +121,7 @@ public:
 			}
 			case 3:
 			{
+				//Resultado de la multiplicacion de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -126,9 +129,9 @@ public:
 				cin >> x2 >> y2;
 				Vector2 v1(x1, y1);
 				Vector2 v2(x2, y2);
-				Vector2 v3 = v1.mult(v2);
+				Vector2 v3 = v1.multiplicacion(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
 				cin >> op;
@@ -144,6 +147,7 @@ public:
 			}
 			case 4:
 			{
+				//Resultado de la division de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -151,9 +155,9 @@ public:
 				cin >> x2 >> y2;
 				Vector2 v1(x1, y1);
 				Vector2 v2(x2, y2);
-				Vector2 v3 = v1.div(v2);
+				Vector2 v3 = v1.division(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
 				cin >> op;
@@ -169,6 +173,7 @@ public:
 			}
 			case 5:
 			{
+				//Resultado del producto punto de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -176,7 +181,7 @@ public:
 				cin >> x2 >> y2;
 				Vector2 v1(x1, y1);
 				Vector2 v2(x2, y2);
-				double v3 = v1.prEsc(v2);
+				double v3 = v1.productoEscalar(v2);
 				cout << "R= " << v3;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -193,6 +198,7 @@ public:
 			}
 			case 6:
 			{
+				//Resultado del producto cruz de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -200,9 +206,9 @@ public:
 				cin >> x2 >> y2;
 				Vector2 v1(x1, y1);
 				Vector2 v2(x2, y2);
-				Vector2 v3 = v1.prVect(v2);
+				Vector2 v3 = v1.productoVectorial(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
 				cin >> op;
@@ -218,6 +224,7 @@ public:
 			}
 			case 7:
 			{
+				//Resultado de la magnitud de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del vector (x1 y1): ";
 				cin >> x1 >> y1;
@@ -239,13 +246,14 @@ public:
 			}
 			case 8:
 			{
+				//Resultado de la normalizacion de 2 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del vector (x1 y1): ";
 				cin >> x1 >> y1;
 				Vector2 v1(x1, y1);
-				Vector2 v2 = v1.norm();
+				Vector2 v2 = v1.normalizar();
 				cout << "R= ";
-				v2.Mostrar();
+				v2.mostrar();
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
 				cin >> op;
@@ -266,7 +274,7 @@ public:
 			}
 			}
 		}
-
+		//Menu de operaciones de 3 Vectores 
 		void Vector3D()
 		{
 			cout << "----------------------------------------" << endl;
@@ -293,6 +301,7 @@ public:
 			{
 			case 1:
 			{
+				//Resultado de la suma de 3 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -300,9 +309,9 @@ public:
 				cin >> x2 >> y2 >> z2;
 				Vector3 v1(x1, y1, z1);
 				Vector3 v2(x2, y2, z2);
-				Vector3 v3 = v1.sum(v2);
+				Vector3 v3 = v1.suma(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -319,6 +328,7 @@ public:
 			}
 			case 2:
 			{
+				//Resultado de la resta de 3 vectores de los valores ingresados
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -326,9 +336,9 @@ public:
 				cin >> x2 >> y2 >> z2;
 				Vector3 v1(x1, y1, z1);
 				Vector3 v2(x2, y2, z2);
-				Vector3 v3 = v1.rest(v2);
+				Vector3 v3 = v1.resta(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -345,6 +355,7 @@ public:
 			}
 			case 3:
 			{
+				//Resultado de la multiplicacion de 3 vectores de los valores ingresados
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -352,9 +363,9 @@ public:
 				cin >> x2 >> y2 >> z2;
 				Vector3 v1(x1, y1, z1);
 				Vector3 v2(x2, y2, z2);
-				Vector3 v3 = v1.mult(v2);
+				Vector3 v3 = v1.multiplicacion(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -373,6 +384,7 @@ public:
 			}
 			case 4:
 			{
+				//Resultado de la division de 3 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -380,9 +392,9 @@ public:
 				cin >> x2 >> y2 >> z2;
 				Vector3 v1(x1, y1, z1);
 				Vector3 v2(x2, y2, z2);
-				Vector3 v3 = v1.div(v2);
+				Vector3 v3 = v1.division(v2);
 				cout << "R= ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -401,6 +413,7 @@ public:
 			}
 			case 5:
 			{
+				//Resultado del producto punto de 3 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -408,7 +421,7 @@ public:
 				cin >> x2 >> y2 >> z2;
 				Vector3 v1(x1, y1, z1);
 				Vector3 v2(x2, y2, z2);
-				double v3 = v1.prEsc(v2);
+				double v3 = v1.productoEscalar(v2);
 				cout << "R= " << v3;
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
@@ -428,6 +441,7 @@ public:
 			}
 			case 6:
 			{
+				//Resultado del producto cruz de 3 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -435,9 +449,9 @@ public:
 				cin >> x2 >> y2 >> z2;
 				Vector3 v1(x1, y1, z1);
 				Vector3 v2(x2, y2, z2);
-				Vector3 v3 = v1.prVect(v2);
+				Vector3 v3 = v1.productoVectorial(v2);
 				cout << "R=  ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -456,6 +470,7 @@ public:
 			}
 			case 7:
 			{
+				//Resultado de la magnitud de 3 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
@@ -480,13 +495,14 @@ public:
 			}
 			case 8:
 			{
+				//Resultado de la normalizacion de 3 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del vector (x1 y1 z1): ";
 				cin >> x1 >> y1 >> z1;
 				Vector3 v1(x1, y1, z1);
-				Vector3 v2 = v1.norm();
+				Vector3 v2 = v1.normalizar();
 				cout << "R=  ";
-				v2.Mostrar();
+				v2.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -510,7 +526,7 @@ public:
 			}
 			}
 		}
-
+		//Menu de operaciones de 4 Vectores 
 		void Vector4D()
 		{
 			cout << "----------------------------------------" << endl;
@@ -536,6 +552,7 @@ public:
 			{
 			case 1:
 			{
+				//Resultado de la suma de 4 vectores de los valores ingresados
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
@@ -543,9 +560,9 @@ public:
 				cin >> x2 >> y2 >> z2 >> w2;
 				Vector4 v1(x1, y1, z1, w1);
 				Vector4 v2(x2, y2, z2, w2);
-				Vector4 v3 = v1.sum(v2);
+				Vector4 v3 = v1.suma(v2);
 				cout << "R=  ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -563,6 +580,7 @@ public:
 			}
 			case 2:
 			{
+				//Resultado de la resta de 4 vectores de los valores ingresados
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
@@ -570,9 +588,9 @@ public:
 				cin >> x2 >> y2 >> z2 >> w2;
 				Vector4 v1(x1, y1, z1, w1);
 				Vector4 v2(x2, y2, z2, w2);
-				Vector4 v3 = v1.rest(v2);
+				Vector4 v3 = v1.resta(v2);
 				cout << "R=  ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -590,6 +608,7 @@ public:
 			}
 			case 3:
 			{
+				//Resultado de la multiplicacion de 4 vectores de los valores ingresados
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
@@ -597,9 +616,9 @@ public:
 				cin >> x2 >> y2 >> z2 >> w2;
 				Vector4 v1(x1, y1, z1, w1);
 				Vector4 v2(x2, y2, z2, w2);
-				Vector4 v3 = v1.mult(v2);
+				Vector4 v3 = v1.multiplicacion(v2);
 				cout << "R=  ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -618,6 +637,7 @@ public:
 			}
 			case 4:
 			{
+				//Resultado de la division de 4 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
@@ -625,9 +645,9 @@ public:
 				cin >> x2 >> y2 >> z2 >> w2;
 				Vector4 v1(x1, y1, z1, w1);
 				Vector4 v2(x2, y2, z2, w2);
-				Vector4 v3 = v1.div(v2);
+				Vector4 v3 = v1.division(v2);
 				cout << "R=  ";
-				v3.Mostrar();
+				v3.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;
@@ -646,6 +666,7 @@ public:
 			}
 			case 5:
 			{
+				//Resultado del producto punto de 4 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del primer vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
@@ -653,7 +674,7 @@ public:
 				cin >> x2 >> y2 >> z2 >> w2;
 				Vector4 v1(x1, y1, z1, w1);
 				Vector4 v2(x2, y2, z2, w2);
-				double v3 = v1.prEsc(v2);
+				double v3 = v1.productoEscalar(v2);
 				cout <<"R=  " << v3;
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
@@ -673,6 +694,7 @@ public:
 			}
 			case 6:
 			{
+				//Resultado de la magnitud de 4 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
@@ -697,13 +719,14 @@ public:
 			}
 			case 7:
 			{
+				//Resultado de la normalizacion de 4 vectores de los valores ingresados 
 				cout << "----------------------------------------" << endl;
 				cout << "Ingrese los valores del vector (x1 y1 z1 w1): ";
 				cin >> x1 >> y1 >> z1 >> w1;
 				Vector4 v1(x1, y1, z1, w1);
-				Vector4 v2 = v1.norm();
+				Vector4 v2 = v1.normalizar();
 				cout << "R=  ";
-				v2.Mostrar();
+				v2.mostrar();
 				cout << "----------------------------------------" << endl;
 				cout << "¿Desea continuar? (1-Si/2-No) :";
 				int op;

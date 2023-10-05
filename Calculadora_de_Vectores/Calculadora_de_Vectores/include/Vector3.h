@@ -7,48 +7,57 @@ public:
 	Vector3(double x, double y, double z) : x_(x), y_(y), z_(z) {}
 	~Vector3() = default;
 
-	Vector3 sum(Vector3 v)
+	//Realiza la suma entre 3 vectores
+	Vector3 suma(Vector3 v)
 	{
 		return Vector3(x_ + v.x_, y_ + v.y_, z_ + v.z_);
 	}
 
-	Vector3 rest(Vector3 v)
+	//Realiza la resta entre 3 vectores
+	Vector3 resta(Vector3 v)
 	{
 		return Vector3(x_ - v.x_, y_ - v.y_, z_ - v.z_);
 	}
 
-	Vector3 mult(Vector3 v)
+	//Realiza la multiplicacion entre 3 vectores
+	Vector3 multiplicacion(Vector3 v)
 	{
 		return Vector3(x_ * v.x_, y_ * v.y_, z_ * v.z_);
 	}
 
-	Vector3 div(Vector3 v)
+	//Realiza la division entre 3 vectores
+	Vector3 division(Vector3 v)
 	{
 		return Vector3(x_ / v.x_, y_ / v.y_, z_ / v.z_);
 	}
 
-	double prEsc(Vector3 v)
+	//Realiza el producto escala entre 3 vectores
+	double productoEscalar(Vector3 v)
 	{
 		return (x_ * v.x_) + (y_ * v.y_) + (z_ * v.z_);
 	}
 
-	Vector3 prVect(Vector3 v)
+	//Realiza el producto vectorial entre 3 vectores
+	Vector3 productoVectorial(Vector3 v)
 	{
 		return Vector3((y_ * v.z_) - (z_ * v.y_), (z_ * v.x_) - (x_ * v.z_), (x_ * v.y_) - (y_ * v.x_));
 	}
 
+	//Realiza la magnitud entre 3 vectores
 	double magnitud()
 	{
 		return sqrt((x_ * x_) + (y_ * y_) + (z_ * z_));
 	}
 
-	Vector3 norm()
+	//Realiza la normalizacion entre 3 vectores
+	Vector3 normalizar()
 	{
 		double mag = magnitud();
 		return Vector3(x_ / mag, y_ / mag, z_ / mag);
 	}
 
-	void Mostrar()
+	//Muestra el resultado de los 3 vectores
+	void mostrar()
 	{
 		cout << "Vector: (" << x_ << ", " << y_ << ", " << z_ << ")" << endl;
 	}
